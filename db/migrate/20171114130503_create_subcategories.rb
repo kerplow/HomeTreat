@@ -2,7 +2,7 @@ class CreateSubcategories < ActiveRecord::Migration[5.0]
   def change
     create_table :subcategories do |t|
       t.string :name
-      t.references :category, foreign_key: true
+      t.references :category, foreign_key: true, index: true
 
       t.timestamps
     end
