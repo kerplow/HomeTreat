@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171114153038) do
+ActiveRecord::Schema.define(version: 20171114150926) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,11 +72,14 @@ ActiveRecord::Schema.define(version: 20171114153038) do
     t.time     "duration"
     t.integer  "specialist_id"
     t.string   "segment"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.integer  "subcategory_id"
     t.index ["specialist_id"], name: "index_treatments_on_specialist_id", using: :btree
+    t.index ["subcategory_id"], name: "index_treatments_on_subcategory_id", using: :btree
   end
 
   add_foreign_key "subcategories", "categories"
   add_foreign_key "treatments", "specialists"
+  add_foreign_key "treatments", "subcategories"
 end
