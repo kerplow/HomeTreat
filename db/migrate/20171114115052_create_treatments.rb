@@ -5,7 +5,6 @@ class CreateTreatments < ActiveRecord::Migration[5.0]
       t.integer :price
       t.time :duration
       t.references :specialist, foreign_key: true, index: true
-      t.references :subcategory, foreign_key: true, index: true
       t.string :segment
 
       t.timestamps
