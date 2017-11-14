@@ -1,17 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>TODO</title>
+    <title>HomeTreat | Get your treatment. Anytime. Anywhere.</title>
+
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
-  </head>
+
+    <!-- <meta name="description" content="HomeTreat info's">
+    <meta charset="utf-8" />
+    <link rel="icon" href="" type="image/png" />
+    <meta property="og:title" content="HomeTreat | USP" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.hometreat.nl/" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="HomeTreat description" />
+    <meta property="og:site_name" content="HomeTreat" />
+    <link rel="alternate" hreflang="en" href="/" />
+    <link rel="alternate" hreflang="nl" href="/nl" />
+    <link rel="alternate" href="/" hreflang="x-default" />
+    <link rel="canonical" href="https://www.hometreat.nl/" />
+   -->
+
+   </head>
+
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <%= render 'shared/navbar' %>
+
+    <%= render 'shared/flashes' %>
+
+    <%= render 'shared/footer' %>
+
     <%= yield %>
     <%= javascript_include_tag 'application' %>
+
   </body>
 </html>
