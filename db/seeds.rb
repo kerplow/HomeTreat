@@ -44,8 +44,12 @@ subcategories_body.each do |subcategory_body|
 end
 
 # specialist seed
-5.times do
-  specialist = Specialist.new()
+10.times do
+  specialist = Specialist.new({ first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, address: Faker::Address.street_address, bio: Faker::MostInterestingManInTheWorld.quote, rating: (0..5).to_a.sample })
+  specialist.email = Faker::Internet.email
+  specialist.password = 'password'
+  specialist.password_confirmation = 'password'
+  specialist.save!
 end
 
 # treatment seed
