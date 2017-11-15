@@ -40,15 +40,15 @@
 }
 .card-category {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 20px;
+  left: 20px;
   font-size: 15px;
   text-transform: uppercase;
 }
 .card-description {
   position: absolute;
   bottom: 10px;
-  left: 10px;
+  left: 20px;
 }
 .card-description h2 {
   font-size: 24px;
@@ -57,6 +57,16 @@
   font-size: 16px;
   opacity: 0.8;
   font-weight: lighter;
+}
+
+.card-rating {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.checked {
+  color: orange;
 }
 .card-link {
   position: absolute;
