@@ -1,31 +1,19 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# category seed
 puts 'Creating categories...'
-hair = Category.create!({
-  name: "Hair"
-})
-skin = Category.create!({
-  name: "Skin"
-})
-nails = Category.create!({
-  name: "Nails"
-})
-body = Category.create!({
-  name: "Body"
-})
+hair = Category.new({ name: "Hair" })
+hair.save
+
+skin = Category.new({ name: "Skin" })
+skin.save
+
+nails = Category.new({ name: "Nails" })
+nails.save
+
+body = Category.new({ name: "Body" })
+body.save
 puts 'Categories added!'
 
-# puts 'Creating subcategories...'
-
-# puts 'Subcategories added!'
-
-# Subcategory.new(subcategory)
-
+# subcategory seed
 subcategories_hair = ["Hair cut", "Hair removal", "Hair trimming / shaving", "Hair colouring", "Hair styling"]
 subcategories_skin = ["Skin care", "Make-up"]
 subcategories_nails = ["Manicure", "Pedicure"]
@@ -54,3 +42,11 @@ subcategories_body.each do |subcategory_body|
   subcategory_a.category = body
   subcategory_a.save
 end
+
+# specialist seed
+5.times do
+  specialist = Specialist.new()
+end
+
+# treatment seed
+
