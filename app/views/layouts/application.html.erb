@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>HomeTreat | Get your treatment. Anytime. Anywhere.</title>
-
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
-
     <!-- <meta name="description" content="HomeTreat info's">
     <meta charset="utf-8" />
     <link rel="icon" href="" type="image/png" />
@@ -23,18 +21,13 @@
     <link rel="alternate" href="/" hreflang="x-default" />
     <link rel="canonical" href="https://www.hometreat.nl/" />
    -->
-
    </head>
 
   <body>
     <%= render 'shared/navbar' %>
-
     <%= render 'shared/flashes' %>
-
-    <%= render 'shared/footer' %>
-
     <%= yield %>
     <%= javascript_include_tag 'application' %>
-
+    <%= render 'shared/footer' %>
   </body>
 </html>
