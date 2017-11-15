@@ -19,14 +19,14 @@
 
     <div class="wrapper-grey padded">
       <div class="container">
-        <h2 class="text-center">Your own specialist</h2>
+        <h2 class="text-center">All barbers in your region</h2>
         <div class="row">
           <% @specialists.each do |specialist| %><!-- no puts -->
             <div class="col-xs-12 col-sm-4">
               <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-paris.jpg');">
                 <div class="card-category"><%= specialist.first_name%></div>
                 <div class="card-description">
-                  <h2>Seb's home</h2>
+                  <h2>Barber</h2>
                   <p> <%= truncate(specialist.bio, length: 60, escape: false) %></p>
 
 
