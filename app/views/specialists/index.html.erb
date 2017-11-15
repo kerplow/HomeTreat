@@ -19,17 +19,25 @@
 
     <div class="wrapper-grey padded">
       <div class="container">
-        <h2 class="text-center">Your own specialist</h2>
+        <h2 class="text-center">All barbers in your region</h2>
         <div class="row">
           <% @specialists.each do |specialist| %><!-- no puts -->
             <div class="col-xs-12 col-sm-4">
               <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-paris.jpg');">
                 <div class="card-category"><%= specialist.first_name%></div>
+                  <div class="card-rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
                 <div class="card-description">
-                  <h2>Seb's home</h2>
-                  <p><%= specialist.bio %></p>
+                  <h2>Barber</h2>
+                  <p> <%= truncate(specialist.bio, length: 60, escape: false) %></p>
                 </div>
-                <img class="card-user avatar avatar-large" src="images/anne.jpg">
+                <%= image_tag 'anne.jpg', class: "card-user avatar avatar-large" %>
+                <!-- <img class="card-user avatar avatar-large" src="images/anne.jpg"> -->
                 <a class="card-link" href="#" ></a>
               </div>
             </div>
@@ -42,7 +50,7 @@
       <h2>Get news from us</h2>
       <p>Leave us your mail and get news from us</p>
       <form class="form-inline">
-        <input type="email" placeholder="bob@gmail.com" class="form-control">
+        <input type="email" placeholder="specialist@gmail.com" class="form-control">
         <input type="submit" value="Subscribe" class="btn btn-primary btn-bordered btn-bordered-primary">
       </form>
     </div>
@@ -61,7 +69,7 @@
             </ul>
           </div>
           <div class="col-xs-8 text-right">
-            <p>This is a Airbnb Home challenge @ LeWagon</p>
+            <p>This is a HomeTreat project @ LeWagon</p>
           </div>
         </div>
       </div>
