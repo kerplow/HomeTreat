@@ -25,12 +25,16 @@
             <div class="col-xs-12 col-sm-4">
               <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-paris.jpg');">
                 <div class="card-category"><%= specialist.first_name%></div>
+                  <div class="card-rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
                 <div class="card-description">
                   <h2>Barber</h2>
                   <p> <%= truncate(specialist.bio, length: 60, escape: false) %></p>
-
-
-                  <!-- specialist_bio_short[0..30].gsub(/\s\w+\s*$/,'...') -->
                 </div>
                 <%= image_tag 'anne.jpg', class: "card-user avatar avatar-large" %>
                 <!-- <img class="card-user avatar avatar-large" src="images/anne.jpg"> -->
