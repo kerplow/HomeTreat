@@ -4,5 +4,5 @@ class Client < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  mount_uploader :photo, PhotoUploader
+  # mount_uploader :photo, PhotoUploader
 end
