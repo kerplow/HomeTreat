@@ -4,6 +4,10 @@ ruby '2.3.5'
 #user login:
 gem 'devise'
 
+#picture upload(use with caution)
+gem 'cloudinary'
+gem 'carrierwave', '~> 0.11.2'
+
 gem 'figaro'
 gem 'jbuilder', '~> 2.0'
 gem 'pg'
