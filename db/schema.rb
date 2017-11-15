@@ -85,7 +85,7 @@ ActiveRecord::Schema.define(version: 20171115134659) do
   create_table "treatments", force: :cascade do |t|
     t.string   "description"
     t.integer  "price"
-    t.time     "duration"
+    t.integer  "duration"
     t.integer  "specialist_id"
     t.string   "segment"
     t.datetime "created_at",     null: false
