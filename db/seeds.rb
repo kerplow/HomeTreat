@@ -49,6 +49,9 @@ end
   specialist.email = Faker::Internet.email
   specialist.password = 'password'
   specialist.password_confirmation = 'password'
+  # (1..10).to_a.sample.times do
+  #   treatment = Treatment.new({ description: })
+  # end
   specialist.save!
 end
 
