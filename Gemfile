@@ -8,6 +8,9 @@ gem 'devise'
 gem 'cloudinary'
 gem 'carrierwave', '~> 0.11.2'
 
+# assets
+gem 'faker'
+
 gem 'figaro'
 gem 'jbuilder', '~> 2.0'
 gem 'pg'
