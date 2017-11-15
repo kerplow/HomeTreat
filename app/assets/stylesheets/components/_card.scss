@@ -21,7 +21,6 @@
   padding: 20px;
   margin: 20px 50px;
   height: 200px;
-
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
   background-position: center;
@@ -61,10 +60,8 @@
 
 .card-rating {
   position: absolute;
-  // right: 20px;
-  // bottom: 20px;
   left: 20px;
-  top: 45px;
+  top: 50px;
 }
 
 .checked {
