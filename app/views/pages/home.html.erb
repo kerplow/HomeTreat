@@ -5,7 +5,7 @@
   <div class="banner-content">
       <h1><span style="color: #FFFFFF">Home</span><span style="color: #0168c9">Treat</span></h1>
       <p><strong>Get your treatment</strong>. Anytime. Anywhere.</p>
-      <%= link_to 'Book now', specialists_path, { class: 'btn btn-hometreat btn-lg' } %>
+      <%= render 'shared/searchbox' %>
   </div>
 </div>
 
@@ -26,7 +26,6 @@
     <h1>HomeTreat</h1>
     <p>Get your treatment. Anytime. Anywhere.</p>
     <div class="container">
-      <%= render 'shared/searchbox' %>
     </div>
   </div>
 </div>
