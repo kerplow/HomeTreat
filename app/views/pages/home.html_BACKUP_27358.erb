@@ -1,0 +1,12 @@
+<%= video_tag "body.webm", :loop => true, :autoplay => true, poster: "ht_banner.jpg", class: "video" %>
+<%= video_tag "body.mp4", :loop => true, :autoplay => true, poster: "ht_banner.jpg", class: "video" %>
+
+<div class="banner" style="background-image: radial-gradient(rgba(201,74,1,0.4), rgba(201,74,1,0.3), rgba(1,104,201,0.5))">
+  <div class="banner-content">
+      <h1><span style="color: #FFFFFF">Home</span><span style="color: #0168c9">Treat</span></h1>
+      <p><strong>Get your treatment</strong>. Anytime. Anywhere.</p>
+      <%= render 'shared/searchbox' %>
+  </div>
+</div>
+
+
