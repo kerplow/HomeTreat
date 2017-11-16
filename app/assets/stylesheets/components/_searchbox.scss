@@ -1,0 +1,28 @@
+.searchbox {
+  height: 300px;
+  background-color: $blue;
+  color: $orange;
+  padding: 30px;
+}
+
+// subcategory selectie box
+.searchbox select[multiple] {
+  height: 80px;
+  color: black;
+}
+
+// minimum en maximum prijs
+.searchbox #price_minimum,#price_maximum {
+
+}
+
+// rating checkboxen
+.rating-input {
+
+}
+
+// search button
+#search-button {
+
+}
+
