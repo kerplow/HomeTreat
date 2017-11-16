@@ -5,7 +5,7 @@
       <!-- treatment types selection, meegegeven als array onder params[:subcategory] -->
       <label for="subcategory" class="col-sm-6 col-form-label">treatment type</br>(ctr/cmd for multiple select)</label>
       <div class="col-sm-6">
-        <select multiple="multiple" class="custom-select mb-2 mr-sm-2 mb-sm-0" id="SubcategorySelect" name="sucategory[]">
+        <select multiple="multiple" class="custom-select mb-2 mr-sm-2 mb-sm-0" id="SubcategorySelect" name="subcategory[]">
           <option selected>Choose...</option>
           <% Subcategory.all.each do |subcategory|  %>
           <option><%= subcategory.name %></option>

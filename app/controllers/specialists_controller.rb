@@ -4,7 +4,11 @@ class SpecialistsController < ApplicationController
 
   def index
     @specialists = Specialist.all
-    @specialists = @specialists.where(subcategory: params[:subcategory]) if params[:subcategory]
+    if params[:subcategory]
+      # @specialists.joins()
+      # @specialists = @specialists.joins(:subcategories)
+      # .where(subcategory: params[:subcategory])
+    end
     # @specialists = @specialists.where(price: params[:price[:min]].to_i..params[:price[:max]].to_i) if params[:price]
     # if params[:rating]
     #   ratings = rating_convert(params[:rating])
