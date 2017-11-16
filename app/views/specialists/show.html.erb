@@ -2,27 +2,7 @@
   <div class="text-center">
     <p>Your selected specialist<p>
   </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-md-6 col-sm-4">
-          <div class ="card">
-            <div class="card-category">Hair Specialist</div>
-              <div class="card-description">
-                <h2><%= @specialist.first_name %></h2>
-                <p><%= @specialist.bio %></p>
-              </div>
-              <img class="card-user avatar" src="https://kitt.lewagon.com/placeholder/users/annekeweerts">
-              <a class="card-link" href="#" ></a>
-              <div class="card-rating">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <% specialist = @specialist %>
+  <%= render "shared/card", specialist: specialist %>
+</div>
 

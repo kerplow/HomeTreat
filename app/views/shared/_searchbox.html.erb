@@ -1,0 +1,61 @@
+<div class="searchbox">
+  <!-- search query in url (bookmarken) -->
+  <form method='GET' action="<%= specialists_path %>">
+    <div class="form-group row">
+      <!-- treatment types selection, meegegeven als array onder params[:sucategory] -->
+      <label for="subcategory" class="col-sm-6 col-form-label">treatment type</br>(ctr/cmd for multiple select)</label>
+      <div class="col-sm-6">
+        <select multiple="multiple" class="custom-select mb-2 mr-sm-2 mb-sm-0" id="SubcategorySelect" name="sucategory[]">
+          <option selected>Choose...</option>
+          <% Subcategory.all.each do |subcategory|  %>
+          <option><%= subcategory.name %></option>
+          <% end %>
+        </select>
+      </div>
+    </div>
+
+    <!-- prijsrange, onder params[:price[:min ,:max]] -->
+    <div class="form-group row">
+      <label for="name" class="col-sm-3 col-form-label">price range:</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" id="price_minimum" name="price[min]" placeholder="price in euro">
+      </div>
+      <div class="col-sm-1"> to </div>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" id="price_maximum" name="price[max]" placeholder="price in euro">
+      </div>
+    </div>
+
+    <!-- sterren, onder params[:rating[:1star, etc]] -->
+    <div class="form-group row">
+      <div class="col-sm-2">rating</div>
+      <div class="col-sm-10">
+        <div class="form-check">
+          <label class="form-check-label">
+            <input class="form-check-input rating-input" type="checkbox" name="rating[1star]"> 1 star
+          </label>
+          <label class="form-check-label">
+            <input class="form-check-input rating-input" type="checkbox" name="rating[2star]"> 2 stars
+          </label>
+          <label class="form-check-label">
+            <input class="form-check-input rating-input" type="checkbox" name="rating[3star]"> 3 stars
+          </label>
+          <label class="form-check-label">
+            <input class="form-check-input rating-input" type="checkbox" name="rating[4star]"> 4 stars
+          </label>
+          <label class="form-check-label">
+            <input class="form-check-input rating-input" type="checkbox" name="rating[5star]"> 5 stars
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- searchknop, oerlelijk, anneke? -->
+    <div class="form-group row">
+      <div class="col-sm-10">
+        <button type="submit" class="btn btn-primary" id="search-button">Search</button>
+      </div>
+    </div>
+
+  </form>
+</div>
