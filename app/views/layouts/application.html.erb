@@ -6,7 +6,10 @@
     <title>HomeTreat | Get your treatment. Anytime. Anywhere.</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
-    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %><!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+
+
     <!-- <meta name="description" content="HomeTreat info's">
     <meta charset="utf-8" />
     <link rel="icon" href="" type="image/png" />
@@ -29,5 +32,13 @@
     <%= yield %>
     <%= javascript_include_tag 'application' %>
     <%= render 'shared/footer' %>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+
+
+
   </body>
+
 </html>
