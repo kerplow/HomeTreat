@@ -25,7 +25,10 @@
   <div class="banner-content">
     <h1>HomeTreat</h1>
     <p>Get your treatment. Anytime. Anywhere.</p>
-    <%= link_to 'Book now', specialists_path, { class: 'btn btn-primary btn-lg' } %>
+    <div class="container">
+      <%= render 'shared/searchbox' %>
+    </div>
+  </div>
 </div>
 </div>
 
