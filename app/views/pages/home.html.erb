@@ -1,33 +1,10 @@
-<%= video_tag "body.webm", :loop => true, :autoplay => true, poster: "ht_banner.jpg", class: "video" %>
-<%= video_tag "body.mp4", :loop => true, :autoplay => true, poster: "ht_banner.jpg", class: "video" %>
+<%= video_tag "hair.webm", :loop => true, :autoplay => true, poster: "ht_banner.jpg", class: "video" %>
+<%= video_tag "hair.mp4", :loop => true, :autoplay => true, poster: "ht_banner.jpg", class: "video" %>
 
-<div class="banner" style="background-image: radial-gradient(rgba(201,74,1,0.5), rgba(201,74,1,0.3), rgba(1,104,201,0.9))">
+<div class="banner" style="background-image: radial-gradient(rgba(201,74,1,0.4), rgba(201,74,1,0.3), rgba(1,104,201,0.5))">
   <div class="banner-content">
       <h1><span style="color: #FFFFFF">Home</span><span style="color: #0168c9">Treat</span></h1>
       <p><strong>Get your treatment</strong>. Anytime. Anywhere.</p>
       <%= link_to 'Book now', specialists_path, { class: 'btn btn-hometreat btn-lg' } %>
   </div>
 </div>
-
-
- <!--  <video playsinline autoplay muted loop poster="" id="bgvid">
-  <%= video_tag "hair.webm", :controls => true %>
-  <%= video_tag "hair.mp4", :controls => true %>
-  </video>
-
-
-<video playsinline autoplay muted loop poster="" id="bgvid">
-    <source src="public/hair.webm" type="video/webm">
-    <source src="public/hair.mp4" type="video/mp4">
-</video>
-
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= asset_path "ht_banner.jpg" %>');">
-  <div class="banner-content">
-    <h1>HomeTreat</h1>
-    <p>Get your treatment. Anytime. Anywhere.</p>
-    <%= link_to 'Book now', specialists_path, { class: 'btn btn-primary btn-lg' } %>
-</div>
-</div>
-
-
- -->
