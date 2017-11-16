@@ -4,7 +4,10 @@ class SpecialistsController < ApplicationController
 
   def index
     @specialists = Specialist.all
-    # @specialists = @specialists.where(subcategory: params[:subcategory]) if params[:subcategory]
+    if params[:subcategory]
+      subcategory_id_array = Subcategory.where(name: params[:subcategory]).pluck(:id)
+      @specialists = @specialists.joins(:treatments).where("treatments.subcategory_id IN (?)", subcategory_id_array)
+    end
     # @specialists = @specialists.where(price: params[:price[:min]].to_i..params[:price[:max]].to_i) if params[:price]
     # if params[:rating]
     #   ratings = rating_convert(params[:rating])
