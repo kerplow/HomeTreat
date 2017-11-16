@@ -28,3 +28,6 @@ module HomeTreats
     # -- all .rb files in that directory are automatically loaded.
   end
 end
+
+# # adding path to assets/videos
+# config.assets.paths << Rails.root.join("app", "assets", "videos")
