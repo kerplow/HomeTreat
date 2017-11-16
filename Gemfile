@@ -3,6 +3,7 @@ ruby '2.3.5'
 
 #user login:
 gem 'devise'
+gem 'omniauth-facebook'
 
 #picture upload(use with caution)
 gem 'cloudinary'

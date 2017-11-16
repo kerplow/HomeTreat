@@ -3,6 +3,8 @@
 //   padding: 50px;
 // }
 
+.wrapper {
+}
 
 .wrapper-orange {
   background: $orange;
@@ -12,23 +14,19 @@
 
 .wrapper-orange p {
   color: $white;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
 }
-
 .card {
   border-radius: 2%;
-  background: $blue;
+  background: $white;
   padding: 20px;
   margin: 20px 50px;
   height: 200px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
   background-position: center;
-  color: white;
+  color: $blue;
   position: relative;
   box-shadow: 0 1px 10px rgba(0,0,0,0.6)
 }
-
 .card-user {
   position: absolute;
   right: 20px;
@@ -48,23 +46,28 @@
   position: absolute;
   bottom: 10px;
   left: 20px;
+  color: $blue;
 }
 .card-description h2 {
   font-size: 24px;
+  color: $blue;
 }
 .card-description p {
   font-size: 16px;
-  opacity: 0.8;
+  opacity: 1;
   font-weight: lighter;
+  color: $blue;
 }
 
 .card-rating {
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   position: absolute;
   left: 20px;
   top: 50px;
 }
 
 .checked {
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   color: orange;
 }
 .card-link {
