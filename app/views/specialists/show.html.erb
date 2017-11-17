@@ -1,36 +1,7 @@
-<div>
-  <h1>Treatments offered by <% @specialist.first_name %> <% @specialist.last_name %></h1>
-    <div class="specialist_treatment_grid">
-        <div class="specialist_treatment_description">
-          <strong>Description</strong>
-        </div>
-        <div class="specialist_treatment_duration">
-          <strong>Duration</strong>
-        </div>
-        <div class="specialist_treatment_price">
-          <strong>Price</strong>
-        </div>
-        <div class="specialist_treatment_checkbox">
-          <strong>Select Treatment</strong>
-        </div>
-    </div>
+<div class="wrapper-orange">
+  <div class="text-center">
+    <p>Your selected specialist<p>
+  </div>
+  <% specialist = @specialist %>
 
-    <% @specialist.treatments.each do |treatment| %>
-      <div class="specialist_treatment_grid">
-        <div class="specialist_treatment_description">
-
-        </div>
-        <div class="specialist_treatment_duration">
-          <%= treatment.duration %> min
-        </div>
-        <div class="specialist_treatment_price">
-          € <%= treatment.price %>
-        </div>
-        <div class="specialist_treatment_checkbox">
-          <form method='GET' action="<%= specialists_path %>">
-            <input type="checkbox">
-          </form>
-        </div>
-      </div>
-    <% end %>
 </div>
