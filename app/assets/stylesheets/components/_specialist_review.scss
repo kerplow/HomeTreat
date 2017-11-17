@@ -1,8 +1,18 @@
 .specialist_review {
-  background-color: white;
-  border: 1px solid grey;
-  color: $blue;
+  border-radius: 2px;
+  background: $white;
   padding: 20px;
+  margin: 20px 8px;
+  background-size: cover !important;
+  background-position: center;
+  color: $blue;
+  position: relative;
+  box-shadow: 0 1px 10px rgba(0,0,0,0.6)
+
+  // background-color: $white;
+  // border: 1px solid grey;
+  // color: $blue;
+  // padding: 20px;
 }
 
 .specialist_review_head {
@@ -26,8 +36,11 @@
 }
 
 .specialist_review_author {
-
-
+  font-weight: bold;
+  text-align: center;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-shadow: none;
 }
 
 .specialist_review_content {
