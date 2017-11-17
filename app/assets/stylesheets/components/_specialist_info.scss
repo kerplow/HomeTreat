@@ -1,0 +1,59 @@
+.wrapper {
+  color: white;
+  padding: 20px;
+}
+.specialist_info {
+  border-radius: 2%;
+  background: $white;
+  padding: 20px;
+  margin: 20px 8px;
+  height: 400px;
+  background-size: cover !important;
+  background-position: center;
+  color: $blue;
+  position: relative;
+  box-shadow: 0 1px 10px rgba(0,0,0,0.6)
+}
+.specialist_info_user {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 200px;
+  border-radius: 50%;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.6)
+}
+.specialist_info_category {
+  position: absolute;
+  text-align: center;
+  top: 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.specialist_info_description {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  color: $blue;
+}
+.info-description h2 {
+  font-size: 24px;
+  color: $blue;
+}
+.info-description p {
+  font-size: 16px;
+  opacity: 1;
+  font-weight: lighter;
+  color: $blue;
+}
+.specialist_info_rating {
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  font-size: 25px;
+  position: absolute;
+  // left: 50px;
+  top: 280px;
+}
+.checked {
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  color: orange;
+}
