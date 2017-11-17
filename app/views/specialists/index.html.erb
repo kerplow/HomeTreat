@@ -1,29 +1,12 @@
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Specialists</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:300,400,500,700">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-<div class="banner" style="background-image: radial-gradient(rgba(201,74,1,0.4), rgba(201,74,1,0.3), rgba(1,104,201,0.5));">
-  <% params %>
+<!-- <div class="banner" style="background-image: radial-gradient(rgba(201,74,1,0.4), rgba(201,74,1,0.3), rgba(1,104,201,0.5));"> -->
+  <%= params %>
   <!-- main div  -->
-  <div class="wrapper">
-    <h2 class="text-center">All specialists in your selection</h2>
+  <div class="wrapper-blue">
+    <h4 class="text-center">All specialists in your selection</h4>
+    <br>
     <div class="container">
       <!-- splitsen in 2 delen (searchbox & result lijst) -->
       <div class="row">
-        <div class="col-xs-6">
-          <!-- searchbox links -->
-            <div class="row">
-              <%= render 'shared/searchbox' %>
-            </div>
-        </div>
         <div class="col-xs-6">
           <!-- kaarten rechts -->
           <div class="row">
@@ -33,26 +16,19 @@
             <% end %>
           </div>
         </div>
+        <div class="col-xs-6">
+          <!-- searchbox links -->
+            <div class="row">
+              <%= render 'shared/searchbox' %>
+            </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
+<!-- </div> -->
 
 
-<!--   <div class="text-center padded" id="newsletter">
-    <h2>Get news from us</h2>
-    <p>Leave us your mail and get news from us</p>
-    <form class="form-inline">
-      <input type="email" placeholder="specialist@gmail.com" class="form-control">
-      <input type="submit" value="Subscribe" class="btn btn-primary btn-bordered btn-bordered-primary">
-    </form>
-  </div> -->
 
-  <!-- Including Bootstrap JS (with its jQuery dependency) so that dynamic components work -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-</body>
-</html>
-
+<!-- <div class="photobanner" style="background-image: radial-gradient(rgba(201,74,1,0.4), rgba(201,74,1,0.3), rgba(1,104,201,0.5)), url(<%= asset_path 'ht_banner.jpg' %>);"> -->
 
 

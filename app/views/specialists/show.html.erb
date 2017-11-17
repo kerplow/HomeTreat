@@ -1,8 +1,22 @@
-<div class="wrapper-orange">
+<div class="wrapper-blue">
   <div class="text-center">
     <p>Your selected specialist<p>
   </div>
   <% specialist = @specialist %>
-  <%= render "shared/card", specialist: specialist %>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <%= render "specialist_info", specialist: specialist %>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <%= render "specialist_info", specialist: specialist %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12">
+        <%= render "specialist_info", specialist: specialist %>
+      </div>
+    </div>
+  </div>
 </div>
 
