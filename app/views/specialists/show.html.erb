@@ -1,8 +1,17 @@
+<div class="container">
 <div class="wrapper-orange">
   <div class="text-center">
     <p>Your selected specialist<p>
   </div>
   <% specialist = @specialist %>
   <%= render "shared/card", specialist: specialist %>
+  <div class="row">
+  <% specialist.reviews.each do |review| %>
+    <div class="col-xs-12 col-md-10 col-md-offset-1">
+  <%= render "specialist_review", review: review %>
+    </div>
+  <% end %>
+</div>
+</div>
 </div>
 

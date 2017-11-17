@@ -1,0 +1,35 @@
+.specialist_review {
+  background-color: white;
+  border: 1px solid grey;
+  color: $blue;
+  padding: 20px;
+}
+
+.specialist_review_head {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.specialist_review_info {
+  flex: 0 0 auto;
+  margin: 10px;
+}
+
+.specialist_review_title {
+  flex: 0 1 auto;
+  margin: 10px;
+}
+
+.specialist_review_rating {
+
+}
+
+.specialist_review_author {
+
+
+}
+
+.specialist_review_content {
+
+}

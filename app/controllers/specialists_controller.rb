@@ -4,8 +4,10 @@ class SpecialistsController < ApplicationController
 
   def index
     @specialists = Specialist.all
-    params[:price][:min] = 0 if params[:price][:min] == ""
-    params[:price][:max] = 1000 if params[:price][:max] == ""
+    if params[:price]
+      params[:price][:min] = 0 if params[:price][:min] == ""
+      params[:price][:max] = 1000 if params[:price][:max] == ""
+    end
     if params[:subcategory]
     subcategory_id_array = Subcategory.where(name: params[:subcategory]).pluck(:id)
       @specialists = @specialists.joins(:treatments).where("treatments.subcategory_id IN (?)", subcategory_id_array)
@@ -19,8 +21,7 @@ class SpecialistsController < ApplicationController
     # @specialists = Specialist.joins(:treatments, :subcategories).includes(:treatments, :subcategories)
     # if params[:subcategory]
     #   subcategory_id_array = Subcategory.where(name: params[:subcategory]).pluck(:id)
-    #   @specialists = @specialists.select { |specialist| specialist.treatments.subcategory}
-
+    # end
   end
 
   def show
