@@ -1,0 +1,80 @@
+.specialist_treatment {
+  border-radius: 2px;
+  background: $white;
+  padding: 20px;
+  margin: 20px 8px;
+  height: 400px;
+  color: $blue;
+  position: relative;
+  box-shadow: 0 1px 10px rgba(0,0,0,0.6)
+}
+
+.specialist_treatment_grid {
+  display: grid;
+  grid-template-rows: 200px;
+  grid-template-columns: 70% 10% 10% 10%;
+}
+
+.specialist_treatment_description {
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 1;
+}
+
+.specialist_treatment_duration {
+  grid-row: 1 / span 1;
+  grid-column: 2 / span 1;
+}
+
+.specialist_treatment_price {
+  grid-row: 1 / span 1;
+  grid-column: 3 / span 1;
+}
+
+.specialist_treatment_checkbox {
+  grid-row: 1 / span 1;
+  grid-column: 4 / span 1;
+}
+
+.item-width {
+    width: 130px;
+  }
+
+  .treatment-title {
+    font-size: 18px;
+    align-items: center;
+  }
+
+    .treatment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+  }
+
+.treatments_wrapper {
+  // background-color: white;
+  // color: #3c3c3c;
+  // padding: 20px;
+  // box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+  border-radius: 2px;
+  background: $white;
+  padding: 20px;
+  margin: 20px 8px;
+  height: 400px;
+  background-size: cover !important;
+  background-position: center;
+  color: $blue;
+  position: relative;
+  box-shadow: 0 1px 10px rgba(0,0,0,0.6)
+
+}
+  .treatment-data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0px;
+    font-weight: 100;
+    font-size: 14px;
+  }
+
+
