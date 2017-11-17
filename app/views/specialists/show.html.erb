@@ -13,9 +13,11 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-12 col-sm-12">
-        <%= render "specialist_info", specialist: specialist %>
-      </div>
+      <% specialist.reviews.each do |review| %>
+        <div class="col-xs-12 col-md-10 col-md-offset-1">
+          <%= render "specialist_review", review: review %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
