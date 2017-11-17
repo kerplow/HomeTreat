@@ -65,7 +65,6 @@ subcategories = Subcategory.all
   specialist.password_confirmation = 'password'
   # treatment seed
   (1..10).to_a.sample.times do
-    subcategory
     treatment = Treatment.new({ description: Faker::Dessert.variety, price: rand(5..30), duration: rand(5..60), segment: 'everyone' })
     treatment.specialist = specialist
     treatment.subcategory = subcategories.sample
