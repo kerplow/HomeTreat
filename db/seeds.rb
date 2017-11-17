@@ -43,21 +43,41 @@ subcategories_body.each do |subcategory_body|
   subcategory_a.save
 end
 
-subcategories = Subcategory.all
+# client seed
+5.times do
+  client = Client.new({ first_name: Faker::Name.first_name, last_name: Faker::Name.last_name })
+  client.email = Faker::Internet.email
+  client.password = 'password'
+  client.password_confirmation = 'password'
+  client.save!
+end
+
+
 # specialist seed
+review_titles = ["nice", "perfect", "loved it", "superb", "smells funny", "treated me real good"]
+clients = Client.all
+subcategories = Subcategory.all
 10.times do
   specialist = Specialist.new({ first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, address: Faker::Address.street_address, bio: Faker::MostInterestingManInTheWorld.quote, rating: (0..5).to_a.sample })
   specialist.email = Faker::Internet.email
   specialist.password = 'password'
   specialist.password_confirmation = 'password'
+  # treatment seed
   (1..10).to_a.sample.times do
     treatment = Treatment.new({ description: Faker::Dessert.variety, price: rand(5..30), duration: rand(5..60), segment: 'everyone' })
     treatment.specialist = specialist
     treatment.subcategory = subcategories.sample
     treatment.save
   end
+  # review seed
+  (1..10).to_a.sample.times do
+    review = Review.new({ title: review_titles.sample, content: Faker::MostInterestingManInTheWorld.quote, rating: rand(0..5) })
+    review.specialist = specialist
+    review.client = clients.sample
+    review.save!
+  end
   specialist.save!
 end
 
-# treatment seed
+
 

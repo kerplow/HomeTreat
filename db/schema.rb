@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171115134659) do
+ActiveRecord::Schema.define(version: 20171117104223) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,8 +46,27 @@ ActiveRecord::Schema.define(version: 20171115134659) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "photo"
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "facebook_picture_url"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "token"
+    t.datetime "token_expiry"
     t.index ["email"], name: "index_clients_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_clients_on_reset_password_token", unique: true, using: :btree
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.string   "title"
+    t.text     "content"
+    t.integer  "rating"
+    t.integer  "client_id"
+    t.integer  "specialist_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["client_id"], name: "index_reviews_on_client_id", using: :btree
+    t.index ["specialist_id"], name: "index_reviews_on_specialist_id", using: :btree
   end
 
   create_table "specialists", force: :cascade do |t|
@@ -97,6 +116,8 @@ ActiveRecord::Schema.define(version: 20171115134659) do
 
   add_foreign_key "appointments", "clients"
   add_foreign_key "appointments", "treatments"
+  add_foreign_key "reviews", "clients"
+  add_foreign_key "reviews", "specialists"
   add_foreign_key "subcategories", "categories"
   add_foreign_key "treatments", "specialists"
   add_foreign_key "treatments", "subcategories"
