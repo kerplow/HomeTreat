@@ -1,13 +1,12 @@
 <div class="row">
   <div class="col-xs-12">
-    <div class ="card">
-      <div class="card-category"><%= specialist.first_name %></div>
-      <div class="card-description">
+    <div class ="specialist-card">
+      <div class="specialist-card-category"><%= specialist.first_name %></div>
+      <div class="specialist-card-description">
         <p><%= truncate(specialist.bio, length: 60, escape: false) %></p>
       </div>
-      <%= image_tag 'anne.jpg', class: "card-user avatar avatar-large" %>
-      <a class="card-link" href="#" ></a>
-      <div class="card-rating">
+      <%= image_tag 'anne.jpg', class: "specialist-card-user avatar avatar-large" %>
+      <div class="specialist-card-rating">
         <% specialist.rating.times do %>
         <span class="fa fa-star checked"></span>
         <% end %>
@@ -15,7 +14,6 @@
         <span class="fa fa-star"></span>
         <% end %>
       </div>
-      <%= link_to "", specialist_path(specialist), class: "card-link" %>
     </div>
   </div>
 </div>
