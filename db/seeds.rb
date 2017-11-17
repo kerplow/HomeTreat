@@ -52,18 +52,20 @@ end
   client.save!
 end
 
+bios = ["I'm young, friendly, and eager to earn a little on the side", "I'm selfish and like bold man, but Make-up is my true passion", "If you can do my hair I'll work for free", "My dog is hairy and ugly, so I'm fine with any hairstyle", "Beware, I like to listen to heavy metal during my work"]
 
 # specialist seed
 review_titles = ["nice", "perfect", "loved it", "superb", "smells funny", "treated me real good"]
 clients = Client.all
 subcategories = Subcategory.all
 10.times do
-  specialist = Specialist.new({ first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, address: Faker::Address.street_address, bio: Faker::MostInterestingManInTheWorld.quote, rating: (0..5).to_a.sample })
+  specialist = Specialist.new({ first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, address: Faker::Address.street_address, bio: bios.sample, rating: (0..5).to_a.sample })
   specialist.email = Faker::Internet.email
   specialist.password = 'password'
   specialist.password_confirmation = 'password'
   # treatment seed
   (1..10).to_a.sample.times do
+    subcategory
     treatment = Treatment.new({ description: Faker::Dessert.variety, price: rand(5..30), duration: rand(5..60), segment: 'everyone' })
     treatment.specialist = specialist
     treatment.subcategory = subcategories.sample
