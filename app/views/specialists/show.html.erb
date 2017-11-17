@@ -1,7 +1,23 @@
-<div class="wrapper-orange">
+<div class="wrapper-blue">
   <div class="text-center">
     <p>Your selected specialist<p>
   </div>
   <% specialist = @specialist %>
-
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <%= render "specialist_info", specialist: specialist %>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <%= render "specialist_treatments", specialist: specialist %>
+      </div>
+    </div>
+    <div class="row">
+      <% specialist.reviews.each do |review| %>
+        <div class="col-xs-12 col-md-10 col-md-offset-1">
+          <%= render "specialist_review", review: review %>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>

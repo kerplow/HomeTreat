@@ -1,0 +1,24 @@
+<div class="specialist_review">
+  <div class="specialist_review_head">
+    <div class="specialist_review_info">
+      <h4 class="specialist_review_author">
+        <%= review.client.first_name %>
+      </h3>
+      <div class="specialist_review_rating">
+        <% review.rating.times do %>
+          <span class="fa fa-star checked"></span>
+        <% end %>
+        <% (5-review.rating).times do %>
+          <span class="fa fa-star"></span>
+        <% end %>
+      </div>
+    </div>
+    <h3 class="specialist_review_title">
+      <%= review.title %>
+    </h2>
+  </div>
+  <p class="specialist_review_content">
+    <%= review.content %>
+  </p>
+</div>
+
