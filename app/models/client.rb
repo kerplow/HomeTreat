@@ -5,6 +5,8 @@ class Client < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, omniauth_providers: [:facebook]
 
+  has_many :reviews
+
   mount_uploader :photo, PhotoUploader
 
   def self.find_for_facebook_oauth(auth)

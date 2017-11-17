@@ -9,4 +9,5 @@ class Specialist < ApplicationRecord
   has_many :treatments
   has_many :subcategories, through: :treatments
   has_many :appointments, through: :treatments
+  has_many :reviews
 end
