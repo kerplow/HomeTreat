@@ -21,9 +21,10 @@
         <% end %>
 
         <ul>
-          <% specialist.treatments.each do |tr| %>
+          <% specialist.treatments.take(3).each do |tr| %>
             <li>
-              <%= tr.subcategory.name %>, <%= tr.price %>
+              <%= tr.subcategory.name %> - €
+ <%= tr.price %>
             </li>
           <% end %>
         </ul>

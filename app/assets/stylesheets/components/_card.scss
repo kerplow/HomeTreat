@@ -28,7 +28,7 @@
 //   color: $white;
 // }
 .card {
-  border-radius: 2px;
+  border-radius: 2%;
   background: $white;
   padding: 20px;
   margin: 20px 50px;
@@ -76,6 +76,7 @@
   position: absolute;
   left: 20px;
   top: 50px;
+  font-size: 16px;
 }
 
 .checked {
@@ -96,28 +97,4 @@
   opacity: 0.1;
 }
 
-.specialist_treatment_grid {
-  display: grid;
-  grid-template-rows: 200px;
-  grid-template-columns: 70% 10% 10% 10%;
-}
 
-.specialist_treatment_description {
-  grid-row: 1 / span 1;
-  grid-column: 1 / span 1;
-}
-
-.specialist_treatment_duration {
-  grid-row: 1 / span 1;
-  grid-column: 2 / span 1;
-}
-
-.specialist_treatment_price {
-  grid-row: 1 / span 1;
-  grid-column: 3 / span 1;
-}
-
-.specialist_treatment_checkbox {
-  grid-row: 1 / span 1;
-  grid-column: 4 / span 1;
-}
