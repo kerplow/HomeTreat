@@ -3,25 +3,21 @@ class SpecialistsController < ApplicationController
   skip_before_action :authenticate_client!, only: [:index, :show]
 
   def index
-    @specialists = Specialist.all
+    @specialists = Specialist.eager_load(treatments: [:subcategory]).all
     if params[:price]
       params[:price][:min] = 0 if params[:price][:min] == ""
       params[:price][:max] = 1000 if params[:price][:max] == ""
+      @specialists = @specialists.joins(:treatments).where("treatments.price BETWEEN ? AND ?", params[:price][:min], params[:price][:max]).uniq
     end
+
     if params[:subcategory]
-    subcategory_id_array = Subcategory.where(name: params[:subcategory]).pluck(:id)
-      @specialists = @specialists.joins(:treatments).where("treatments.subcategory_id IN (?)", subcategory_id_array)
+      subcategory_id_array = Subcategory.where(name: params[:subcategory]).pluck(:id)
+      @specialists = @specialists.where("treatments.subcategory_id IN (?)", subcategory_id_array)
     end
-    # @specialists = @specialists.joins(:treatments).where("treatments.price BETWEEN ? AND ?", params[:price][:min], params[:price][:max])
 
     if params[:rating]
       @specialists = @specialists.where(rating: params[:rating])
     end
-
-    # @specialists = Specialist.joins(:treatments, :subcategories).includes(:treatments, :subcategories)
-    # if params[:subcategory]
-    #   subcategory_id_array = Subcategory.where(name: params[:subcategory]).pluck(:id)
-    # end
   end
 
   def show
@@ -30,11 +26,6 @@ class SpecialistsController < ApplicationController
 
   private
 
-  def rating_convert(ratings)
-    converted_ratings = []
-    ratings.keys do |ratingkey|
-      converted_ratings << ratingkey[0]
-    end
-    converted_ratings
+  def search_params
   end
 end
