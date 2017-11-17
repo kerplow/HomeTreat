@@ -7,14 +7,26 @@
         <p><%= truncate(specialist.bio, length: 60, escape: false) %></p>
       </div>
       <%= image_tag 'anne.jpg', class: "card-user avatar avatar-large" %>
-      <a class="card-link" href="#" ></a>
       <div class="card-rating">
-        <% specialist.rating.times do %>
-        <span class="fa fa-star checked"></span>
+
+        <% if specialist.rating %>
+          <% specialist.rating.times do %>
+            <span class="fa fa-star checked"></span>
+          <% end %>
+          <% (5-specialist.rating).times do %>
+            <span class="fa fa-star"></span>
+          <% end %>
+        <% else %>
+          <p>no rating yet</p>
         <% end %>
-        <% (5-specialist.rating).times do %>
-        <span class="fa fa-star"></span>
-        <% end %>
+
+        <ul>
+          <% specialist.treatments.each do |tr| %>
+            <li>
+              <%= tr.subcategory.name %>, <%= tr.price %>
+            </li>
+          <% end %>
+        </ul>
       </div>
       <%= link_to "", specialist_path(specialist), class: "card-link" %>
     </div>

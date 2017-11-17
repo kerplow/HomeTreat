@@ -5,16 +5,14 @@
       <!-- treatment types selection, meegegeven als array onder params[:subcategory] -->
       <label for="subcategory" class="col-sm-6 col-form-label">Please select</br></label>
       <div class="col-sm-6">
-
-
         <!-- <select multiple="multiple" class="custom-select mb-2 mr-sm-2 mb-sm-0" id="SubcategorySelect" name="sucategory[]"> -->
 
-        <select class="selectpicker" multiple>
-          <option value="" selected disabled>Treatments</option>
+        <select class="selectpicker" name='subcategory[]' multiple>
+          <option value="" disabled>Treatments</option>
           <% Category.all.each do |category| %>
             <optgroup label="<%= category.name %>">
               <% category.subcategories.each do |subcategory| %>
-                <option><%= subcategory.name %></option>
+                <option value="<%= subcategory.name %>" ><%= subcategory.name %></option>
               <% end %>
             </optgroup>
           <% end %>
@@ -40,21 +38,29 @@
       <div class="col-sm-10">
         <div class="form-check">
           <label class="form-check-label">
-            <input class="form-check-input rating-input" type="checkbox" name="rating[1star]"> 1 star
+            <input class="form-check-input rating-input" type="checkbox" name="rating[]" value="1"> 1 star
           </label>
           <label class="form-check-label">
-            <input class="form-check-input rating-input" type="checkbox" name="rating[2star]"> 2 stars
+            <input class="form-check-input rating-input" type="checkbox" name="rating[]" value="2"> 2 stars
           </label>
           <label class="form-check-label">
-            <input class="form-check-input rating-input" type="checkbox" name="rating[3star]"> 3 stars
+            <input class="form-check-input rating-input" type="checkbox" name="rating[]" value="3"> 3 stars
           </label>
           <label class="form-check-label">
-            <input class="form-check-input rating-input" type="checkbox" name="rating[4star]"> 4 stars
+            <input class="form-check-input rating-input" type="checkbox" name="rating[]" value="4"> 4 stars
           </label>
           <label class="form-check-label">
-            <input class="form-check-input rating-input" type="checkbox" name="rating[5star]"> 5 stars
+            <input class="form-check-input rating-input" type="checkbox" name="rating[]" value="5"> 5 stars
           </label>
         </div>
+      </div>
+    </div>
+
+    <!-- location, onder params[:location[:lat, :lng]] -->
+    <div class="form-group row">
+      <label for="name" class="col-sm-2 col-form-label">Location:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="location_input" name="location" placeholder="eg. Overhoeksplein 2">
       </div>
     </div>
 

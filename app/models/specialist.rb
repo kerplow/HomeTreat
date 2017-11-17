@@ -7,4 +7,6 @@ class Specialist < ApplicationRecord
   # mount_uploader :photo, PhotoUploader
 
   has_many :treatments
+  has_many :subcategories, through: :treatments
+  has_many :appointments, through: :treatments
 end
