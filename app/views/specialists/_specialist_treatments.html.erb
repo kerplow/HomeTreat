@@ -1,34 +1,31 @@
-<div>
-  <h1>Treatments offered by <%= @specialist.first_name %> <%= @specialist.last_name %></h1>
-    <div class="specialist_treatment_grid">
-        <div class="specialist_treatment_description">
-          <strong>Description</strong>
-        </div>
-        <div class="specialist_treatment_duration">
-          <strong>Duration</strong>
-        </div>
-        <div class="specialist_treatment_price">
-          <strong>Price</strong>
-        </div>
-        <div class="specialist_treatment_checkbox">
-          <strong>Select Treatment</strong>
-        </div>
-    </div>
+<div class="treatments_wrapper">
+  <div class="treatments_title"><strong>Treatments offered by <%= @specialist.first_name %> <%= @specialist.last_name %></strong></div>
+  <p></p>
+  <div class="treatment-header">
+   <div class="treatment-header-item item-width"><strong>Description</strong></div>
+   <div class="treatment-header-item item-width"><strong>Duration</strong></div>
+   <div class="treatment-header-item item-width"><strong>Price</strong></div>
+   <div class="treatment-header-item item-width"><strong></strong></div>
 
-    <% @specialist.treatments.each do |treatment| %>
-      <div class="specialist_treatment_grid">
-        <div class="specialist_treatment_description">
-          <%= treatment.description %>
-        </div>
-        <div class="specialist_treatment_duration">
-          <%= treatment.duration %> min
-        </div>
-        <div class="specialist_treatment_price">
-          € <%= treatment.price %>
-        </div>
-        <div class="specialist_treatment_checkbox">
-          <a class = 'btn btn-primary' href="<%= specialist_treatment_path(@specialist) %>">Select</a>
-        </div>
-      </div>
-    <% end %>
+  </div>
+<% @specialist.treatments.each do |treatment| %>
+<div class="treatment-data">
+
+   <div class="treatment-item item-width">
+    <%= treatment.description %> treatment
+  </div>
+  <div class="treatment-item item-width">
+    <%= treatment.duration %> min
+  </div>
+  <div class="treatment-item item-width">
+    € <%= treatment.price %>
+  </div>
+  <div class="treatment-item item-width">
+    <a class = 'btn-treatment' href="<%= specialist_treatment_path(@specialist)%>">Select</a>
+  </div>
+
+
 </div>
+<% end %>
+</div>
+
