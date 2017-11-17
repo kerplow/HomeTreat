@@ -1,1 +1,16 @@
-_review-card.html.erb
+<div class="row">
+  <div class="col-xs-12">
+    <div class="review-card">
+      <h2><%= review.title %></h2>
+      <h3><%= review.client %></h3>
+      <% review.rating.times do %>
+        <span class="fa fa-star checked"></span>
+      <% end %>
+      <% (5-review.rating).times do %>
+        <span class="fa fa-star"></span>
+      <% end %>
+      <p>review.content</p>
+    </div>
+  </div>
+</div>
+
