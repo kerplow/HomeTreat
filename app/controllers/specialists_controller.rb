@@ -12,7 +12,7 @@ class SpecialistsController < ApplicationController
     subcategory_id_array = Subcategory.where(name: params[:subcategory]).pluck(:id)
       @specialists = @specialists.joins(:treatments).where("treatments.subcategory_id IN (?)", subcategory_id_array)
     end
-    @specialists = @specialists.joins(:treatments).where("treatments.price BETWEEN ? AND ?", params[:price][:min], params[:price][:max])
+    # @specialists = @specialists.joins(:treatments).where("treatments.price BETWEEN ? AND ?", params[:price][:min], params[:price][:max])
 
     if params[:rating]
       @specialists = @specialists.where(rating: params[:rating])
