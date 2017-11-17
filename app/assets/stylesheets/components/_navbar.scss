@@ -5,6 +5,8 @@ body{
 
 /* Main navbar */
 .navbar-wagon {
+  position: fixed;
+  top: 0;
   text-transform: uppercase;
   z-index: 1;
   height: 50px;

@@ -27,12 +27,15 @@
    </head>
 
   <body>
+    <div style="min-height: calc(100vh - 50px)">
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
+    <div style="padding-top: 50px;">
     <%= yield %>
+    </div>
     <%= javascript_include_tag 'application' %>
+    </div>
     <%= render 'shared/footer' %>
-
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
